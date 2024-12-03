@@ -1,0 +1,202 @@
+# FIRST AUTHOR ttrtty5, YEAR.
+        #
+        msgid ""
+        msgstr ""
+        "Project-Id-Version: \n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2019-04-06 16:26+0800\n"
+        "PO-Revision-Date: 2019-04-06 20:03+0800\n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+        "Last-Translator: \n"
+        "Language-Team: \n"
+        "Language: zh\n"
+        "X-Generator: Poedit 2.2\n"
+
+# -- 全局参数 --
+
+msgid "Quick Resolution Setup"
+msgstr "快捷分辨率设置"
+
+msgid "Resolution Adjustment"
+msgstr "分辨率调整"
+
+msgid "Resolution Adjustment (by Hades Su)"
+msgstr "分辨率调整（来自苏冥）"
+
+# ----
+
+msgid "Display author name?"
+msgstr "显示作者名称"
+
+# ----
+
+msgid "Custom"
+msgstr "自定义"
+
+msgid "Default"
+msgstr "默认"
+
+msgid "Setup Resolution"
+msgstr "设置分辨率"
+
+msgid "Select Proportion"
+msgstr "选择比例"
+
+msgid "Incorrect format, using default resolution of 1920x1080."
+msgstr "格式不正确，使用默认分辨率1920x1080。"
+
+msgid "Select Format"
+msgstr "请选择格式"
+
+msgid "Common Format"
+msgstr "常用格式"
+
+msgid "Uncommon Format"
+msgstr "不常用格式"
+
+msgid "Common Proportion"
+msgstr "常用比例"
+
+msgid "Uncommon Proportion"
+msgstr "不常用比例"
+
+msgid "Lock Resolution Proportion"
+msgstr "锁定分辨率比例"
+
+msgid "Resolution Proportion"
+msgstr "分辨率比例"
+
+msgid "Lock"
+msgstr "锁定"
+
+# ----
+
+msgid "360p is a common format for low-resolution video, often used for web videos and mobile devices."
+msgstr "360p是低分辨率视频的常见格式，常用于网络视频和移动设备。"
+
+msgid "480p is a common resolution for standard definition video."
+msgstr "480p是标准清晰度视频的常见分辨率。"
+
+msgid "720p, also known as 720i, is the standard resolution for high definition, suitable for small displays such as mobile phones and tablets."
+msgstr "720p也称为720i，是高清晰度的标准分辨率，适合手机和平板电脑等小型显示器。"
+
+msgid "1080p, also known as 1080i, is the standard resolution of Full HD and is the most widely used, suitable for most computer monitors and TVs."
+msgstr "1080p也称为1080i，是全高清的标准分辨率，应用最广泛，适用于大部分电脑显示器和电视。"
+
+msgid "1440p, also known as 2k, is a resolution between 1080p and 4K, suitable for professional users to perform fine processing of graphics and video content, while also providing an excellent gaming experience‌."
+msgstr "1440p也称为2k，是介于1080p和4K之间的分辨率，适用于专业用户进行图形和视频内容的精细处理，同时也提供出色的游戏体验‌。"
+
+msgid "2160p, also known as 4k, is the standard resolution for ultra-high definition and is widely used in fields such as professional graphic design, video editing, and high-definition movies."
+msgstr "2160p也称为4k，是超高清的标准分辨率，广泛应用于专业图形设计、视频编辑和高清电影等领域‌。"
+
+msgid "5K is suitable for fields such as professional graphic design, video editing and photography, providing higher image quality and detail performance than 4K."
+msgstr "5k适用于专业图形设计、视频编辑和摄影等领域，提供比4K更高的图像质量和细节表现‌。"
+
+msgid "8K is the current highest resolution display standard, suitable for experimental purposes and high-end applications, providing extremely high image quality‌."
+msgstr "8K是目前最高分辨率的显示器标准，适用于实验目的和高端应用，提供极高的图像质量‌。"
+
+msgid "It is commonly used in areas such as video generation and editing, super-resolution video enhancement, etc. in generative video tools."
+msgstr "常用于生成式视频工具的视频生成与编辑、超分辨率视频增强等领域。"
+
+msgid "Commonly used in areas such as generative video tools, ultra-high-definition video applications, infrared thermal imagers, convolutional neural network applications, and full-body image generation."
+msgstr "常用于生成式视频工具、超高清视频应用、红外热像仪、卷积神经网络应用以及全身图像生成等领域。"
+
+msgid "For editing monoscopic equirectangular VR files in 1920h x 960v 2:1 video format."
+msgstr "用于编辑单像球面投影 VR 文件，格式为 1920h x 960v 2:1 视频。"
+
+msgid "For editing monoscopic equirectangular VR files in 3840h x 1920v 2:1 video format."
+msgstr "用于编辑单像球面投影 VR 文件，格式为 3840h x 1920v 2:1 视频。"
+
+msgid "For editing monoscopic equirectangular VR files in 4096h x 2048v 2:1 video format."
+msgstr "用于编辑单像球面投影 VR 文件，格式为 4096h x 2048v 2:1 视频。"
+
+msgid "For editing stereographic VR files in 4096h x 2304v 16:9 video format."
+msgstr "用于编辑立体球面投影 VR 文件，格式为 4096h x 2304v 16:9 视频。"
+
+msgid "For editing monoscopic equirectangular VR files in 8192h x 4096v 2:1 video format."
+msgstr "用于编辑单像球面投影 VR 文件，格式为 8192h x 4096v 2:1 视频。"
+
+msgid "For editing stereographic VR files in 2048h x 2048v 1:1 video format."
+msgstr "用于编辑立体球面投影 VR 文件，格式为 2048h x 2048v 1:1 视频。"
+
+msgid "For editing stereographic VR files in 2880h x 2880v 1:1 video format."
+msgstr "用于编辑立体球面投影 VR 文件，格式为 2880h x 2880v 1:1 视频。"
+
+msgid "For editing stereographic VR files in 4096h x 4096v 1:1 video format."
+msgstr "用于编辑立体球面投影 VR 文件，格式为 4096h x 4096v 1:1 视频。"
+
+msgid "For editing stereographic VR files in 6144h x 6144v 1:1 video format."
+msgstr "用于编辑立体球面投影 VR 文件，格式为 6144h x 6144v 1:1 视频。"
+
+msgid "For editing stereographic VR files in 8192h x 8192v 1:1 video format."
+msgstr "用于编辑立体球面投影 VR 文件，格式为 8192h x 8192v 1:1 视频。"
+
+msgid "Square ratio, suitable for icons, logos, social media avatars, etc. Common resolution formats: 512x512, 1024x1024."
+msgstr "方形比例，适用于图标、徽标、社交媒体头像等场景。常见分辨率格式：100x100、512x512、1024x1024。"
+
+msgid "Portrait ratio, suitable for mobile phone photography, social media vertical video and other scenes. Common resolution formats: 640x960, 1080x1620, 1280x1920."
+msgstr "竖屏比例，适用于手机拍照、社交媒体竖屏视频等场景。常见分辨率格式：640x960、1080x1620、1280x1920。"
+
+msgid "Portrait ratio, suitable for mobile phone photography, social media vertical video and other scenes. Common resolution formats: 640x853, 1080x1448, 1280x1707."
+msgstr "竖屏比例，适用于手机拍照、社交媒体竖屏视频等场景。常见分辨率格式：640x853、1080x1448、1280x1707。"
+
+msgid "Vertical screen ratio, suitable for scenes such as mobile phone videos and social media vertical screen videos. Common resolution formats: 1080x1920, 1280x2272, 1440x2560."
+msgstr "竖屏比例，适用于手机视频、社交媒体竖屏视频等场景。常见分辨率格式：1080x1920、1280x2272、1440x2560。"
+
+msgid "Horizontal screen ratio, suitable for computer monitors, TV programs, slides, etc. Common resolution formats: 1024x768, 1280x960, 1600x1200."
+msgstr "横屏比例，适用于电脑显示器、电视节目、幻灯片等场景。常见分辨率格式：1024x768、1280x960、1600x1200。"
+
+msgid "Horizontal screen ratio, suitable for movies, TV shows, computer monitors, smart phones, etc. Common resolution formats: 1280x720, 1920x1080, 2560x1440."
+msgstr "横屏比例，适用于电影、电视节目、电脑显示器、智能手机等场景。常见分辨率格式：1280x720、1920x1080、2560x1440。"
+
+msgid "Ultra-wide screen ratio, suitable for movies, games, professional displays, etc. Common resolution formats: 2560x1080, 3440x1440, 3840x1600."
+msgstr "超宽屏比例，适用于电影、游戏、专业显示器等场景。常见分辨率格式：2560x1080、3440x1440、3840x1600。"
+
+msgid "Long strip ratio, suitable for banner ads, web design and other scenarios. Common resolution formats: 100x200, 200x400, 500x1000."
+msgstr "长条形比例，适用于横幅广告、网页设计等场景。常见分辨率格式：100x200、200x400、500x1000。"
+
+msgid "Long strip ratio, suitable for banner ads, web design and other scenarios. Common resolution formats: 100x300, 200x600, 500x1500."
+msgstr "长条形比例，适用于横幅广告、网页设计等场景。常见分辨率格式：100x300、200x600、500x1500。"
+
+msgid "Vertical screen ratio, suitable for scenes such as mobile phone videos and social media vertical screen videos. Common resolution formats: 1080x1680, 1280x1920, 1440x2240."
+msgstr "竖屏比例，适用于手机视频、社交媒体竖屏视频等场景。常见分辨率格式：1080x1680、1280x1920、1440x2240。"
+
+msgid "Ultra-wide screen ratio, suitable for movies, games, professional displays, etc. Common resolution formats: 1920x4320, 2560x5760, 3840x8640."
+msgstr "超宽屏比例，适用于电影、游戏、专业显示器等场景。常见分辨率格式：1920x4320、2560x5760、3840x8640。"
+
+msgid "Long strip ratio, suitable for banner ads, web design and other scenarios. Common resolution formats: 200x100, 400x200, 1000x500."
+msgstr "长条形比例，适用于横幅广告、网页设计等场景。常见分辨率格式：200x100、400x200、1000x500。"
+
+msgid "Long strip ratio, suitable for banner ads, web design and other scenarios. Common resolution formats: 300x100, 600x200, 1500x500."
+msgstr "长条形比例，适用于横幅广告、网页设计等场景。常见分辨率格式：300x100、600x200、1500x500。"
+
+msgid "Vertical screen ratio, suitable for mobile phone photography, social media vertical screen video and other scenes. Common resolution formats: 640x960, 1080x1440, 1280x1920."
+msgstr "竖屏比例，适用于手机拍照、社交媒体竖屏视频等场景。常见分辨率格式：640x960、1080x1440、1280x1920。"
+
+msgid "Horizontal screen ratio, suitable for computer monitors, TV programs, slides, etc. Common resolution formats: 800x640, 1280x1024, 1600x1280."
+msgstr "横屏比例，适用于电脑显示器、电视节目、幻灯片等场景。常见分辨率格式：800x640、1280x1024、1600x1280。"
+
+msgid "Ultra-wide screen ratio, suitable for movies, games, professional displays, etc. Common resolution formats: 1920x1080, 2560x1440, 3840x2160."
+msgstr "超宽屏比例，适用于电影、游戏、专业显示器等场景。常见分辨率格式：1920x1080、2560x1440、3840x2160。"
+
+msgid "Ultra-wide screen ratio, suitable for movies, games, professional displays, etc. Common resolution formats: 1280x800, 1600x1000, 2560x1600."
+msgstr "超宽屏比例，适用于电影、游戏、专业显示器等场景。常见分辨率格式：1280x800、1600x1000、2560x1600。"
+
+msgid "5.8''"
+msgstr "5.8寸"
+
+# -- 控件参数 --
+
+msgctxt "Operator"
+msgid "Scale * 2"
+msgstr "扩大一倍"
+
+msgctxt "Operator"
+msgid "Scale / 2"
+msgstr "缩小一倍"
+
+msgctxt "Operator"
+msgid "Swap X/Y"
+msgstr "调转X/Y"
