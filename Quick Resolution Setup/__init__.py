@@ -181,6 +181,8 @@ def qcr_update_select(self, context):
         qcr_pxpy = f"{qcr_px}x{qcr_py}"
         if qcr_pxpy in qcr_resolution_options.keys():
             context.scene.qcr_resolution_setup = qcr_pxpy
+        else:
+            context.scene.qcr_resolution_setup = "default"
 
 # -- 控件触发后的实时监听事件 --
 # -- Real-time monitoring events after the control is triggered --
@@ -323,25 +325,35 @@ class QCR_ButtonOperator(bpy.types.Operator):
             if context.scene.qcr_lock_proportion:
                 # -- 如果处于锁定比例的状态下，调换之后也要重新计算比例
                 # -- If the ratio is locked, the ratio must be recalculated after the swap
-                qcr_aspect_ratio = qcr_py / qcr_px
+                qcr_aspect_ratio = qcr_pre_px / qcr_pre_py
                 # -- 如果处于锁定比例的状态下，调换之后也要重新更新下拉框选项
                 # -- If the ratio is locked, the drop-down box options must be updated after the switch.
                 # 获取当前分辨率的(最大)公约数 1920x1080的公约数是120，也就是1920/120=16、1080/120=9，所以最小比例是16x9
                 # Get the (maximum) common divisor of the current resolution. The common divisor of 1920x1080 is 120, that is, 1920/120=16, 1080/120=9, so the minimum ratio is 16x9
-                qcr_pxpy_gcd = math.gcd(qcr_px, qcr_py)
-                qcr_axay = f"{int(qcr_py / qcr_pxpy_gcd)}x{int(qcr_px / qcr_pxpy_gcd)}"  # e.g.9x16
+                qcr_pxpy_gcd = math.gcd(qcr_pre_px, qcr_pre_py)
+                qcr_axay = f"{int(qcr_pre_px / qcr_pxpy_gcd)}x{int(qcr_pre_py / qcr_pxpy_gcd)}"  # e.g.9x16
                 if qcr_axay in qcr_proportion_options.keys():
                     context.scene.qcr_proportion_select = qcr_axay
-        elif self.mode == 2:  # 缩放 (Zoom out)
+        elif self.mode == 2:  # 缩小 (Zoom out)
             bpy.context.scene.render.resolution_x = math.ceil(qcr_px / 2)
             bpy.context.scene.render.resolution_y = math.ceil(qcr_py / 2)
             qcr_pre_px = math.ceil(qcr_px / 2)
             qcr_pre_py = math.ceil(qcr_py / 2)
+
+            if not context.scene.qcr_lock_proportion:
+                qcr_pxpy = f"{qcr_pre_px}x{qcr_pre_py}"  # e.g.640x360
+                if qcr_pxpy in qcr_resolution_options.keys():
+                    context.scene.qcr_resolution_setup = qcr_pxpy
         elif self.mode == 3:  # 放大 (Zoom in)
             bpy.context.scene.render.resolution_x = math.ceil(qcr_px * 2)
             bpy.context.scene.render.resolution_y = math.ceil(qcr_py * 2)
             qcr_pre_px = math.ceil(qcr_px * 2)
             qcr_pre_py = math.ceil(qcr_py * 2)
+
+            if not context.scene.qcr_lock_proportion:
+                qcr_pxpy = f"{qcr_pre_px}x{qcr_pre_py}"  # e.g.640x360
+                if qcr_pxpy in qcr_resolution_options.keys():
+                    context.scene.qcr_resolution_setup = qcr_pxpy
         else:
             pass
 
