@@ -334,6 +334,10 @@ class QCR_ButtonOperator(bpy.types.Operator):
                 qcr_axay = f"{int(qcr_pre_px / qcr_pxpy_gcd)}x{int(qcr_pre_py / qcr_pxpy_gcd)}"  # e.g.9x16
                 if qcr_axay in qcr_proportion_options.keys():
                     context.scene.qcr_proportion_select = qcr_axay
+            else:
+                qcr_pxpy = f"{qcr_pre_px}x{qcr_pre_py}"  # e.g.640x360
+                if qcr_pxpy in qcr_resolution_options.keys():
+                    context.scene.qcr_resolution_setup = qcr_pxpy
         elif self.mode == 2:  # 缩小 (Zoom out)
             bpy.context.scene.render.resolution_x = math.ceil(qcr_px / 2)
             bpy.context.scene.render.resolution_y = math.ceil(qcr_py / 2)
