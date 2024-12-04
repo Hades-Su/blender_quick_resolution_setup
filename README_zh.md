@@ -10,6 +10,12 @@
 
 力求尽量让你的手不用在键盘和鼠标之间频繁地来回移动，只需要在鼠标上操作就能完成分辨率设置。
 
+A Blender addon for quick, automatic and easy adjustment of camera resolution.
+
+Lazy plugin, usually only a few common resolutions are needed in the creation process.
+
+Strives to minimize the need for frequent switching between the keyboard and mouse, allowing resolution settings to be completed with just mouse operations.
+
 ## 环境
 
 #### 适用版本
