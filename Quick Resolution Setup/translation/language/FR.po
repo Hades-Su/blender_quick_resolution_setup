@@ -1,0 +1,202 @@
+# FIRST AUTHOR ttrtty5, YEAR.
+        #
+        msgid ""
+        msgstr ""
+        "Project-Id-Version: \n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2019-04-06 16:26+0800\n"
+        "PO-Revision-Date: 2019-04-06 20:03+0800\n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+        "Last-Translator: \n"
+        "Language-Team: \n"
+        "Language: zh\n"
+        "X-Generator: Poedit 2.2\n"
+
+# -- 全局参数 --
+
+msgid "Quick Resolution Setup"
+msgstr "Paramètres de résolution rapides"
+
+msgid "Resolution Adjustment"
+msgstr "Ajustement de la résolution"
+
+msgid "Resolution Adjustment (by Hades Su)"
+msgstr "Ajustement de la résolution (de Su Ming)"
+
+# ----
+
+msgid "Display author name?"
+msgstr "Afficher le nom de l'auteur"
+
+# ----
+
+msgid "Custom"
+msgstr "Personnaliser"
+
+msgid "Default"
+msgstr "défaut"
+
+msgid "Setup Resolution"
+msgstr "Définir la résolution"
+
+msgid "Select Proportion"
+msgstr "Sélectionnez l'échelle"
+
+msgid "Incorrect format, using default resolution of 1920x1080."
+msgstr "Format incorrect, utilisant la résolution par défaut 1 920 x 1 080."
+
+msgid "Select Format"
+msgstr "Veuillez sélectionner le format"
+
+msgid "Common Format"
+msgstr "Formats courants"
+
+msgid "Uncommon Format"
+msgstr "Format peu courant"
+
+msgid "Common Proportion"
+msgstr "Proportions communes"
+
+msgid "Uncommon Proportion"
+msgstr "Des proportions peu communes"
+
+msgid "Lock Resolution Ratio"
+msgstr "Rapport de résolution de verrouillage"
+
+msgid "Resolution Ratio"
+msgstr "rapport de résolution"
+
+msgid "Lock"
+msgstr "verrouillage"
+
+# ----
+
+msgid "360p is a common format for low-resolution video, often used for web videos and mobile devices."
+msgstr "360p est un format courant pour la vidéo basse résolution, souvent utilisé dans les vidéos Web et les appareils mobiles."
+
+msgid "480p is a common resolution for standard definition video."
+msgstr "480p est une résolution courante pour la vidéo en définition standard."
+
+msgid "720p, also known as 720i, is the standard resolution for high definition, suitable for small displays such as mobile phones and tablets."
+msgstr "720p, également connu sous le nom de 720i, est une résolution standard haute définition adaptée aux petits écrans tels que les téléphones mobiles et les tablettes."
+
+msgid "1080p, also known as 1080i, is the standard resolution of Full HD and is the most widely used, suitable for most computer monitors and TVs."
+msgstr "1080p, également connu sous le nom de 1080i, est la résolution standard pour le Full HD et est la plus largement utilisée, adaptée à la plupart des écrans d'ordinateur et des téléviseurs."
+
+msgid "1440p, also known as 2k, is a resolution between 1080p and 4K, suitable for professional users to perform fine processing of graphics and video content, while also providing an excellent gaming experience‌."
+msgstr "1440p, également connu sous le nom de 2k, est une résolution comprise entre 1080p et 4K, adaptée aux utilisateurs professionnels pour un traitement fin des graphiques et du contenu vidéo, tout en offrant également une excellente expérience de jeu‌."
+
+msgid "2160p, also known as 4k, is the standard resolution for ultra-high definition and is widely used in fields such as professional graphic design, video editing, and high-definition movies."
+msgstr "2160p, également connu sous le nom de 4k, est la résolution standard de l'ultra haute définition et est largement utilisé dans la conception graphique professionnelle, le montage vidéo et les films haute définition."
+
+msgid "5K is suitable for fields such as professional graphic design, video editing and photography, providing higher image quality and detail performance than 4K."
+msgstr "Le 5k convient à des domaines tels que la conception graphique professionnelle, le montage vidéo et la photographie, offrant une qualité d'image et des performances détaillées supérieures à celles du 4K."
+
+msgid "8K is the current highest resolution display standard, suitable for experimental purposes and high-end applications, providing extremely high image quality‌."
+msgstr "8K est la norme d'affichage la plus haute résolution actuellement disponible, adaptée à des fins expérimentales et aux applications haut de gamme, offrant une qualité d'image extrêmement élevée‌."
+
+msgid "It is commonly used in areas such as video generation and editing, super-resolution video enhancement, etc. in generative video tools."
+msgstr "Il est couramment utilisé dans la génération et le montage vidéo avec des outils vidéo génératifs, l'amélioration vidéo super-résolution et d'autres domaines."
+
+msgid "Commonly used in areas such as generative video tools, ultra-high-definition video applications, infrared thermal imagers, convolutional neural network applications, and full-body image generation."
+msgstr "Couramment utilisé dans les outils vidéo génératifs, les applications vidéo ultra haute définition, les caméras thermiques infrarouges, les applications de réseaux neuronaux convolutifs et la génération d'images du corps entier."
+
+msgid "For editing monoscopic equirectangular VR files in 1920h x 960v 2:1 video format."
+msgstr "Pour l'édition de fichiers VR à projection sphérique monoscopique au format vidéo 1920h x 960v 2:1."
+
+msgid "For editing monoscopic equirectangular VR files in 3840h x 1920v 2:1 video format."
+msgstr "Pour l'édition de fichiers VR à projection sphérique monoscopique au format vidéo 3840h x 1920v 2:1."
+
+msgid "For editing monoscopic equirectangular VR files in 4096h x 2048v 2:1 video format."
+msgstr "Pour l'édition de fichiers VR à projection sphérique monoscopique au format vidéo 4096h x 2048v 2:1."
+
+msgid "For editing stereographic VR files in 4096h x 2304v 16:9 video format."
+msgstr "Pour l'édition de fichiers VR à projection sphérique stéréoscopique au format vidéo 4096h x 2304v 16:9."
+
+msgid "For editing monoscopic equirectangular VR files in 8192h x 4096v 2:1 video format."
+msgstr "Pour l'édition de fichiers VR à projection sphérique monoscopique au format vidéo 8192h x 4096v 2:1."
+
+msgid "For editing stereographic VR files in 2048h x 2048v 1:1 video format."
+msgstr "Pour l'édition de fichiers VR à projection sphérique stéréoscopique au format vidéo 2048h x 2048v 1:1."
+
+msgid "For editing stereographic VR files in 2880h x 2880v 1:1 video format."
+msgstr "Pour l'édition de fichiers VR à projection sphérique stéréoscopique au format vidéo 2880h x 2880v 1:1."
+
+msgid "For editing stereographic VR files in 4096h x 4096v 1:1 video format."
+msgstr "Pour l'édition de fichiers VR à projection sphérique stéréoscopique au format vidéo 4096h x 4096v 1:1."
+
+msgid "For editing stereographic VR files in 6144h x 6144v 1:1 video format."
+msgstr "Utilisé pour éditer des fichiers VR à projection sphérique stéréoscopique au format vidéo 6144h x 6144v 1:1."
+
+msgid "For editing stereographic VR files in 8192h x 8192v 1:1 video format."
+msgstr "Utilisé pour éditer des fichiers VR à projection sphérique stéréoscopique au format vidéo 8192h x 8192v 1:1."
+
+msgid "Square ratio, suitable for icons, logos, social media avatars, etc. Common resolution formats: 512x512, 1024x1024."
+msgstr "Proportion carrée, adaptée aux icônes, logos, avatars de réseaux sociaux, etc. Formats de résolution courants : 100x100, 512x512, 1024x1024."
+
+msgid "Portrait ratio, suitable for mobile phone photography, social media vertical video and other scenes. Common resolution formats: 640x960, 1080x1620, 1280x1920."
+msgstr "Rapport d'écran vertical, adapté à la photographie sur téléphone portable, à la vidéo sur écran vertical sur les réseaux sociaux et à d'autres scénarios. Formats de résolution courants : 640x960, 1080x1620, 1280x1920."
+
+msgid "Portrait ratio, suitable for mobile phone photography, social media vertical video and other scenes. Common resolution formats: 640x853, 1080x1448, 1280x1707."
+msgstr "Rapport d'écran vertical, adapté à la photographie sur téléphone portable, à la vidéo sur écran vertical sur les réseaux sociaux et à d'autres scénarios. Formats de résolution courants : 640x853, 1080x1448, 1280x1707."
+
+msgid "Vertical screen ratio, suitable for scenes such as mobile phone videos and social media vertical screen videos. Common resolution formats: 1080x1920, 1280x2272, 1440x2560."
+msgstr "Rapport d'écran vertical, adapté aux vidéos sur téléphone mobile, aux vidéos à écran vertical sur les réseaux sociaux et à d'autres scénarios. Formats de résolution courants : 1080x1920, 1280x2272, 1440x2560."
+
+msgid "Horizontal screen ratio, suitable for computer monitors, TV programs, slides, etc. Common resolution formats: 1024x768, 1280x960, 1600x1200."
+msgstr "Rapport d'écran horizontal, adapté aux écrans d'ordinateur, aux programmes TV, aux diaporamas, etc. Formats de résolution courants : 1024x768, 1280x960, 1600x1200."
+
+msgid "Horizontal screen ratio, suitable for movies, TV shows, computer monitors, smart phones, etc. Common resolution formats: 1280x720, 1920x1080, 2560x1440."
+msgstr "Rapport d'écran horizontal, adapté aux films, émissions de télévision, écrans d'ordinateur, smartphones, etc. Formats de résolution courants : 1280x720, 1920x1080, 2560x1440."
+
+msgid "Ultra-wide screen ratio, suitable for movies, games, professional displays, etc. Common resolution formats: 2560x1080, 3440x1440, 3840x1600."
+msgstr "Rapport ultra-large, adapté aux films, jeux, moniteurs professionnels et autres scènes. Formats de résolution courants : 2560x1080, 3440x1440, 3840x1600."
+
+msgid "Long strip ratio, suitable for banner ads, web design and other scenarios. Common resolution formats: 100x200, 200x400, 500x1000."
+msgstr "Proportion de barre longue, adaptée aux bannières publicitaires, à la conception de sites Web et à d'autres scénarios. Formats de résolution courants : 100x200, 200x400, 500x1000."
+
+msgid "Long strip ratio, suitable for banner ads, web design and other scenarios. Common resolution formats: 100x300, 200x600, 500x1500."
+msgstr "Proportion de barre longue, adaptée aux bannières publicitaires, à la conception de sites Web et à d'autres scénarios. Formats de résolution courants : 100x300, 200x600, 500x1500."
+
+msgid "Vertical screen ratio, suitable for scenes such as mobile phone videos and social media vertical screen videos. Common resolution formats: 1080x1680, 1280x1920, 1440x2240."
+msgstr "Rapport d'écran vertical, adapté aux vidéos sur téléphone mobile, aux vidéos à écran vertical sur les réseaux sociaux et à d'autres scénarios. Formats de résolution courants : 1080x1680, 1280x1920, 1440x2240."
+
+msgid "Ultra-wide screen ratio, suitable for movies, games, professional displays, etc. Common resolution formats: 1920x4320, 2560x5760, 3840x8640."
+msgstr "Rapport ultra-large, adapté aux films, jeux, moniteurs professionnels et autres scènes. Formats de résolution courants : 1920x4320, 2560x5760, 3840x8640."
+
+msgid "Long strip ratio, suitable for banner ads, web design and other scenarios. Common resolution formats: 200x100, 400x200, 1000x500."
+msgstr "Proportion de barre longue, adaptée aux bannières publicitaires, à la conception de sites Web et à d'autres scénarios. Formats de résolution courants : 200x100, 400x200, 1000x500."
+
+msgid "Long strip ratio, suitable for banner ads, web design and other scenarios. Common resolution formats: 300x100, 600x200, 1500x500."
+msgstr "Proportion de barre longue, adaptée aux bannières publicitaires, à la conception de sites Web et à d'autres scénarios. Formats de résolution courants : 300x100, 600x200, 1500x500."
+
+msgid "Vertical screen ratio, suitable for mobile phone photography, social media vertical screen video and other scenes. Common resolution formats: 640x960, 1080x1440, 1280x1920."
+msgstr "Rapport d'écran vertical, adapté à la photographie sur téléphone portable, à la vidéo sur écran vertical sur les réseaux sociaux et à d'autres scénarios. Formats de résolution courants : 640x960, 1080x1440, 1280x1920."
+
+msgid "Horizontal screen ratio, suitable for computer monitors, TV programs, slides, etc. Common resolution formats: 800x640, 1280x1024, 1600x1280."
+msgstr "Rapport d'écran horizontal, adapté aux écrans d'ordinateur, aux programmes TV, aux diaporamas, etc. Formats de résolution courants : 800x640, 1280x1024, 1600x1280."
+
+msgid "Ultra-wide screen ratio, suitable for movies, games, professional displays, etc. Common resolution formats: 1920x1080, 2560x1440, 3840x2160."
+msgstr "Rapport ultra-large, adapté aux films, jeux, moniteurs professionnels et autres scènes. Formats de résolution courants : 1920x1080, 2560x1440, 3840x2160."
+
+msgid "Ultra-wide screen ratio, suitable for movies, games, professional displays, etc. Common resolution formats: 1280x800, 1600x1000, 2560x1600."
+msgstr "Rapport ultra-large, adapté aux films, jeux, moniteurs professionnels et autres scènes. Formats de résolution courants : 1280x800, 1600x1000, 2560x1600."
+
+msgid "5.8''"
+msgstr "5,8 pouces"
+
+# -- 控件参数 --
+
+msgctxt "Operator"
+msgid "Scale * 2"
+msgstr "Agrandir deux fois"
+
+msgctxt "Operator"
+msgid "Scale / 2"
+msgstr "Doubler la taille"
+
+msgctxt "Operator"
+msgid "Swap X/Y"
+msgstr "Inverser X/Y"
