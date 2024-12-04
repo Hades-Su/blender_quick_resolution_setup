@@ -190,12 +190,12 @@ msgstr "5.8寸"
 # -- 控件参数 --
 
 msgctxt "Operator"
-msgid "Zoom In"
-msgstr "放大"
+msgid "Scale * 2"
+msgstr "放大一倍"
 
 msgctxt "Operator"
-msgid "Zoom Out"
-msgstr "缩小"
+msgid "Scale / 2"
+msgstr "缩小一倍"
 
 msgctxt "Operator"
 msgid "Swap X/Y"

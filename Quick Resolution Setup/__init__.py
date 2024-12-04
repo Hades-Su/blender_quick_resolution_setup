@@ -408,11 +408,11 @@ class QCR_Panel(bpy.types.Panel):
         # Button (convenience button)
         layout_row = layout.row(heading='', align=False)
         # 缩小（Zoom Out）
-        layout_row.operator('qcr.render_format_setup', text='Zoom Out', icon="ZOOM_OUT", emboss=True, depress=False).mode = 2
+        layout_row.operator('qcr.render_format_setup', text='Scale / 2', icon="ZOOM_OUT", emboss=True, depress=False).mode = 2
         # 调转（Swap）
         layout_row.operator('qcr.render_format_setup', text='Swap X/Y', icon="FILE_REFRESH", emboss=True, depress=False).mode = 1  # or icon_value=692
         # 放大（Zoom In）
-        layout_row.operator('qcr.render_format_setup', text='Zoom In', icon="ZOOM_IN", emboss=True, depress=False).mode = 3
+        layout_row.operator('qcr.render_format_setup', text='Scale * 2', icon="ZOOM_IN", emboss=True, depress=False).mode = 3
 
         # -- 基于插件面板设置来更改 Panel名称
         # -- Change the Panel name based on the plugin panel settings
