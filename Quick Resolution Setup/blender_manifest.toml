@@ -2,7 +2,7 @@ schema_version = "1.0.0"
 
 id = "quick_resolution_setup"
 name = "Quick Resolution Setup"
-version = "1.0.0"
+version = "1.0.1"
 type = "add-on"
 tagline = "Quick Resolution Setup"
 description = "Adjust camera resolution quickly, automatically and easily."
@@ -11,7 +11,7 @@ tags = ["3D View", "Scene", "Camera", "Render", "Compositing"]
 maintainer = "苏冥(Hades Su)"
 website = "https://github.com/Hades-Su/blender_quick_resolution_setup"
 
-blender_version_min = "2.80.0"
+blender_version_min = "4.2.0"
 # blender_version_max = "5.1.0"
 
 # License conforming to https://spdx.org/licenses/ (use "SPDX: prefix)

@@ -20,7 +20,7 @@ Created by 苏冥(Hades Su)
 bl_info = {
     "name": "Quick Resolution Setup",
     "author": "苏冥(Hades Su)",
-    "version": (1, 0, 0),
+    "version": (1, 0, 1),
     "blender": (2, 80, 0),
     "category": "Render",
     "doc_url": "https://github.com/Hades-Su/blender_quick_resolution_setup",
@@ -175,7 +175,7 @@ def qcr_update_select(self, context):
     render_settings = bpy.context.scene.render
     qcr_px = render_settings.resolution_x
     qcr_py = render_settings.resolution_y
-    # print("update", px, py)
+    # print("update", qcr_px, qcr_py)
 
     if qcr_px != qcr_pre_px or qcr_py != qcr_pre_py:
         qcr_pxpy = f"{qcr_px}x{qcr_py}"
@@ -190,36 +190,37 @@ def qcr_update_select(self, context):
 # 按比例更新分辨率
 # Update resolution proportionally
 def qcr_update_resolution(self, context):
-    global qcr_pre_px, qcr_pre_py, qcr_aspect_ratio
+    if context.scene.qcr_lock_proportion:
+        global qcr_pre_px, qcr_pre_py, qcr_aspect_ratio
 
-    render_settings = bpy.context.scene.render
-    qcr_px = render_settings.resolution_x
-    qcr_py = render_settings.resolution_y
+        render_settings = bpy.context.scene.render
+        qcr_px = render_settings.resolution_x
+        qcr_py = render_settings.resolution_y
 
-    if qcr_px != qcr_pre_px or py != qcr_pre_py:
-        if qcr_px == qcr_pre_px and qcr_py != qcr_pre_py:
-            # 用新的分辨率Y和原来的比例计算出新的分辨率X
-            # Calculate the new resolution X using the new resolution Y and the original ratio
-            qcr_new_px = int(math.ceil(qcr_py * qcr_aspect_ratio))
-            render_settings.resolution_x = qcr_new_px
-            qcr_pre_px = qcr_new_px
-            qcr_pre_py = qcr_py
-        elif qcr_px != qcr_pre_px and qcr_py == qcr_pre_py:
-            # 用新的分辨率X和原来的比例计算出新的分辨率Y
-            # Calculate the new resolution Y using the new resolution X and the original ratio
-            qcr_new_py = int(math.ceil(qcr_px / qcr_aspect_ratio))
-            render_settings.resolution_y = qcr_new_py
-            qcr_pre_px = qcr_px
-            qcr_pre_py = qcr_new_py
-        elif qcr_px != qcr_pre_px and qcr_py != qcr_pre_py:
-            # 用新的分辨率X和原来的比例计算出新的分辨率Y
-            # Calculate the new resolution Y using the new resolution X and the original ratio
-            qcr_new_py = int(math.ceil(qcr_px / qcr_aspect_ratio))
-            render_settings.resolution_y = qcr_new_py
-            qcr_pre_px = qcr_px
-            qcr_pre_py = qcr_new_py
-        else:
-            pass
+        if qcr_px != qcr_pre_px or qcr_py != qcr_pre_py:
+            if qcr_px == qcr_pre_px and qcr_py != qcr_pre_py:
+                # 用新的分辨率Y和原来的比例计算出新的分辨率X
+                # Calculate the new resolution X using the new resolution Y and the original ratio
+                qcr_new_px = int(math.ceil(qcr_py * qcr_aspect_ratio))
+                render_settings.resolution_x = qcr_new_px
+                qcr_pre_px = qcr_new_px
+                qcr_pre_py = qcr_py
+            elif qcr_px != qcr_pre_px and qcr_py == qcr_pre_py:
+                # 用新的分辨率X和原来的比例计算出新的分辨率Y
+                # Calculate the new resolution Y using the new resolution X and the original ratio
+                qcr_new_py = int(math.ceil(qcr_px / qcr_aspect_ratio))
+                render_settings.resolution_y = qcr_new_py
+                qcr_pre_px = qcr_px
+                qcr_pre_py = qcr_new_py
+            elif qcr_px != qcr_pre_px and qcr_py != qcr_pre_py:
+                # 用新的分辨率X和原来的比例计算出新的分辨率Y
+                # Calculate the new resolution Y using the new resolution X and the original ratio
+                qcr_new_py = int(math.ceil(qcr_px / qcr_aspect_ratio))
+                render_settings.resolution_y = qcr_new_py
+                qcr_pre_px = qcr_px
+                qcr_pre_py = qcr_new_py
+            else:
+                pass
 
 # -- 控件触发事件 --
 # -- Control triggers events --
@@ -406,9 +407,12 @@ class QCR_Panel(bpy.types.Panel):
 
         # Button (convenience button)
         layout_row = layout.row(heading='', align=False)
-        layout_row.operator('qcr.render_format_setup', text='Scale / 2', icon="ZOOM_OUT", emboss=True, depress=False).mode = 2
+        # 缩小（Zoom Out）
+        layout_row.operator('qcr.render_format_setup', text='Zoom Out', icon="ZOOM_OUT", emboss=True, depress=False).mode = 2
+        # 调转（Swap）
         layout_row.operator('qcr.render_format_setup', text='Swap X/Y', icon="FILE_REFRESH", emboss=True, depress=False).mode = 1  # or icon_value=692
-        layout_row.operator('qcr.render_format_setup', text='Scale * 2', icon="ZOOM_IN", emboss=True, depress=False).mode = 3
+        # 放大（Zoom In）
+        layout_row.operator('qcr.render_format_setup', text='Zoom In', icon="ZOOM_IN", emboss=True, depress=False).mode = 3
 
         # -- 基于插件面板设置来更改 Panel名称
         # -- Change the Panel name based on the plugin panel settings
