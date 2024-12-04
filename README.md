@@ -10,6 +10,12 @@ Lazy plugin, usually only a few common resolutions are needed in the creation pr
 
 Strives to minimize the need for frequent switching between the keyboard and mouse, allowing resolution settings to be completed with just mouse operations.
 
+一个用于快捷、自动且方便地调整相机分辨率的 Blender 插件。
+
+懒人插件，在创作的过程中，通常只需要用到个别几个常用的分辨率。
+
+力求尽量让你的手不用在键盘和鼠标之间频繁地来回移动，只需要在鼠标上操作就能完成分辨率设置。
+
 ## Environment
 
 #### Applicable Versions
