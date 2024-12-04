@@ -391,7 +391,7 @@ class QCR_Panel(bpy.types.Panel):
         # Checkbox (Lock Proportions)
         # 勾选后，当更改分辨率其中一项时，自动按比例同步计算并更新另一项的值
         # After checking, when one of the resolutions is changed, the value of the other item will be automatically calculated and updated proportionally.
-        layout_col = layout.column(heading="Resolution Proportion")
+        layout_col = layout.column(heading="Resolution Ratio")
         layout_col.prop(context.scene, "qcr_lock_proportion", text="Locked" if context.scene.qcr_lock_proportion else "Lock")
 
         # 下拉框（设置分辨率）
@@ -455,7 +455,7 @@ def register():
         update=qcr_update_proportion_select,
     )
     bpy.types.Scene.qcr_lock_proportion = bpy.props.BoolProperty(
-        name="Lock Resolution Proportion", 
+        name="Lock Resolution Ratio", 
         description="",
         default=False,
         update=qcr_check_lock_proportion,
