@@ -20,7 +20,8 @@ Strives to minimize the need for frequent switching between the keyboard and mou
 
 #### 适用版本
 
-Blender v2.80.0+
+Blender v2.79 以及新版本
+（适用所有版本）
 
 #### 位置
 
