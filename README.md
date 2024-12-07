@@ -20,7 +20,8 @@ Strives to minimize the need for frequent switching between the keyboard and mou
 
 #### Applicable Versions
 
-Blender v2.80.0+
+Blender v2.79 and newer
+(all version)
 
 #### Location
 
