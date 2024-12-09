@@ -1,5 +1,5 @@
 '''
-Copyright (C) 2018 Samy Tichadou (tonton)
+Copyright (C) 2018 苏冥 (Hades Su)
 
 Created by 苏冥(Hades Su)
 
