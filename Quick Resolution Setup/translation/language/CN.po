@@ -28,7 +28,7 @@ msgstr "分辨率调整（来自苏冥）"
 # ----
 
 msgid "Display author name?"
-msgstr "显示作者名称"
+msgstr "显示作者名称？"
 
 # ----
 

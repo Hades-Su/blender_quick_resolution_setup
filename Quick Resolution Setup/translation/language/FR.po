@@ -28,7 +28,7 @@ msgstr "Ajustement de la résolution (de Su Ming)"
 # ----
 
 msgid "Display author name?"
-msgstr "Afficher le nom de l'auteur"
+msgstr "Afficher le nom de l'auteur?"
 
 # ----
 
