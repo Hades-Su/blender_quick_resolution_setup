@@ -20,7 +20,7 @@ Created by 苏冥(Hades Su)
 bl_info = {
     "name": "Quick Resolution Setup",
     "author": "苏冥(Hades Su)",
-    "version": (1, 0, 1),
+    "version": (1, 0, 2),
     "blender": (2, 80, 0),
     "category": "Render",
     "doc_url": "https://github.com/Hades-Su/blender_quick_resolution_setup",
