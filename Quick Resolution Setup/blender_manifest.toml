@@ -2,11 +2,11 @@ schema_version = "1.0.0"
 
 id = "quick_resolution_setup"
 name = "Quick Resolution Setup"
-version = "1.0.1"
+version = "1.0.3"
 type = "add-on"
 tagline = "Quick Resolution Setup"
 description = "Adjust camera resolution quickly, automatically and easily."
-tags = ["3D View", "Scene", "Camera", "Render", "Compositing"]
+tags = ["3D View", "Camera", "Render", "Compositing"]
 
 maintainer = "苏冥(Hades Su)"
 website = "https://github.com/Hades-Su/blender_quick_resolution_setup"
