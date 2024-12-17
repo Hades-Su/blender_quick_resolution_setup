@@ -23,7 +23,7 @@ msgid "Resolution Adjustment"
 msgstr "Регулировка разрешения"
 
 msgid "Resolution Adjustment (by Hades Su)"
-msgstr "Регулировка разрешения (от Су Мина)"
+msgstr "Регулировка разрешения (от Hades Su)"
 
 # ----
 
@@ -70,6 +70,21 @@ msgstr "коэффициент разрешения"
 
 msgid "Lock"
 msgstr "запирание"
+
+msgid "Lock Resolution"
+msgstr "Разрешение блокировки"
+
+msgid "Lock Resolution X to Selected", 
+msgstr "Блокировка разрешения X для выбора"
+
+msgid "Lock the resolution X, and set the resolution Y when the scale is selected."
+msgstr "Блокирует разрешение X и устанавливает разрешение Y при выборе масштаба."
+
+msgid "Lock Resolution Y to Selected",
+msgstr "Заблокировать разрешение Y для выбора"
+
+msgid "Lock the resolution Y, and set the resolution X when the scale is selected."
+msgstr "Блокирует разрешение Y и устанавливает разрешение X при выборе масштаба."
 
 # ----
 

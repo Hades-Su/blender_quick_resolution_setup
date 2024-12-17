@@ -71,6 +71,21 @@ msgstr "分辨率比例"
 msgid "Lock"
 msgstr "锁定"
 
+msgid "Lock Resolution"
+msgstr "锁定分辨率"
+
+msgid "Lock Resolution X to Selected", 
+msgstr "为选择锁定分辨率X"
+
+msgid "Lock the resolution X, and set the resolution Y when the scale is selected."
+msgstr "锁定分辨率X，并且当选定比例后设置分辨率Y。"
+
+msgid "Lock Resolution Y to Selected",
+msgstr "为选择锁定分辨率Y"
+
+msgid "Lock the resolution Y, and set the resolution X when the scale is selected."
+msgstr "锁定分辨率Y，并且当选定比例后设置分辨率X。"
+
 # ----
 
 msgid "360p is a common format for low-resolution video, often used for web videos and mobile devices."

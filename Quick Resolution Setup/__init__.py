@@ -20,7 +20,7 @@ Created by 苏冥(Hades Su)
 bl_info = {
     "name": "Quick Resolution Setup",
     "author": "苏冥(Hades Su)",
-    "version": (1, 0, 3),
+    "version": (1, 1, 0),
     "blender": (2, 80, 0),
     "category": "Render",
     "doc_url": "https://github.com/Hades-Su/blender_quick_resolution_setup",
@@ -183,30 +183,14 @@ def subscribe_to_resolution(prop_name, notify, args=()):
 def unsubscribe_to_resolution():
     bpy.msgbus.clear_by_owner(object())
 
-# -- 实时监听事件 --
-# -- Real-time monitoring events --
+# =========================================================
+
+# -- 消息订阅监听事件 --
+# -- Message subscription monitoring events --
 
 # 实时按分辨率更新下拉框选项
 # Update drop-down box options in real time according to resolution
 def qcr_update_select():
-    render_settings = bpy.context.scene.render
-    qcr_px = render_settings.resolution_x
-    qcr_py = render_settings.resolution_y
-
-    if qcr_px != qcr_pre_px or qcr_py != qcr_pre_py:
-        qcr_pxpy = f"{qcr_px}x{qcr_py}"  # e.g.640x360
-        if qcr_pxpy in qcr_resolution_options.keys():
-            bpy.context.scene.qcr_properties.qcr_resolution_setup = qcr_pxpy
-        else:
-            bpy.context.scene.qcr_properties.qcr_resolution_setup = "default"
-
-# -- 控件触发后的实时监听事件 --
-# -- Real-time monitoring events after the control is triggered --
-
-# 按比例更新分辨率X
-# Update resolution proportionally x
-def qcr_update_resolution_x():
-    # 如果锁定了分辨率比例
     if bpy.context.scene.qcr_properties.qcr_lock_proportion:
         global qcr_pre_px, qcr_pre_py
 
@@ -214,31 +198,29 @@ def qcr_update_resolution_x():
         qcr_px = render_settings.resolution_x
         qcr_py = render_settings.resolution_y
 
-        # X不相等，Y相等，更新Y
-        # X is not equal, Y is equal, update Y
-        if qcr_px != qcr_pre_px and qcr_py == qcr_pre_py:
+        if qcr_px != qcr_pre_px and qcr_py == qcr_pre_py and qcr_aspect_ratio:
             qcr_new_py = int(math.ceil(qcr_px / qcr_aspect_ratio))
             render_settings.resolution_y = qcr_new_py
             qcr_pre_px = qcr_px
             qcr_pre_py = qcr_new_py
-
-# 按比例更新分辨率Y
-# Update resolution proportionally y
-def qcr_update_resolution_y():
-    if bpy.context.scene.qcr_properties.qcr_lock_proportion:
-        global qcr_pre_px, qcr_pre_py
-
-        render_settings = bpy.context.scene.render
-        qcr_px = render_settings.resolution_x
-        qcr_py = render_settings.resolution_y
-
-        # X相等，Y不相等，更新X
-        # X is equal, Y is not equal, update X
-        if qcr_px == qcr_pre_px and qcr_py != qcr_pre_py:
+        elif qcr_px == qcr_pre_px and qcr_py != qcr_pre_py and qcr_aspect_ratio:
             qcr_new_px = int(math.ceil(qcr_py * qcr_aspect_ratio))
             render_settings.resolution_x = qcr_new_px
             qcr_pre_px = qcr_new_px
             qcr_pre_py = qcr_py
+        else:
+            pass
+    else:
+        render_settings = bpy.context.scene.render
+        qcr_px = render_settings.resolution_x
+        qcr_py = render_settings.resolution_y
+
+        if qcr_px != qcr_pre_px or qcr_py != qcr_pre_py:
+            qcr_pxpy = f"{qcr_px}x{qcr_py}"  # e.g.640x360
+            if qcr_pxpy in qcr_resolution_options.keys():
+                bpy.context.scene.qcr_properties.qcr_resolution_setup = qcr_pxpy
+            else:
+                bpy.context.scene.qcr_properties.qcr_resolution_setup = "default"
 
 # -- 控件触发事件 --
 # -- Control triggers events --
@@ -248,14 +230,29 @@ def qcr_update_resolution_y():
 # “分辨率比例下拉框”选择时触发事件
 # Trigger event when selecting "resolution ratio drop-down box"
 def qcr_update_proportion_select(self, context):
-    global qcr_aspect_ratio
-
     qcr_proportion_selected = bpy.context.scene.qcr_properties.qcr_proportion_select
-
     if qcr_proportion_selected in qcr_proportion_options.keys():
         qcr_proportion_option_selected = qcr_proportion_options[qcr_proportion_selected]
         if qcr_proportion_option_selected and len(qcr_proportion_option_selected) == 2:
+            global qcr_aspect_ratio
+            global qcr_pre_px, qcr_pre_py
+
             qcr_aspect_ratio = float(qcr_proportion_option_selected[0] / qcr_proportion_option_selected[1])
+
+            qcr_px = bpy.context.scene.render.resolution_x
+            qcr_py = bpy.context.scene.render.resolution_y
+            qcr_lock_resolution_x_enabled = bpy.context.scene.qcr_properties.qcr_lock_resolution_x
+            qcr_lock_resolution_y_enabled = bpy.context.scene.qcr_properties.qcr_lock_resolution_y
+            if qcr_lock_resolution_x_enabled and not qcr_lock_resolution_y_enabled and qcr_aspect_ratio:
+                qcr_new_py = int(math.ceil(qcr_px / qcr_aspect_ratio))
+                bpy.context.scene.render.resolution_y = qcr_new_py
+                qcr_pre_px = qcr_px
+                qcr_pre_py = qcr_new_py
+            elif not qcr_lock_resolution_x_enabled and qcr_lock_resolution_y_enabled and qcr_aspect_ratio:
+                qcr_new_px = int(math.ceil(qcr_py * qcr_aspect_ratio))
+                bpy.context.scene.render.resolution_x = qcr_new_px
+                qcr_pre_px = qcr_new_px
+                qcr_pre_py = qcr_py
     else:
         pass
 
@@ -283,13 +280,13 @@ def qcr_update_resolution_setup(self, context):
 # 复选框勾选事件
 # Checkbox check event
 def qcr_check_lock_proportion(self, context):
+    global qcr_pre_px, qcr_pre_py
+    global qcr_aspect_ratio
+
     qcr_px = bpy.context.scene.render.resolution_x
     qcr_py = bpy.context.scene.render.resolution_y
 
     if bpy.context.scene.qcr_properties.qcr_lock_proportion:
-        global qcr_pre_px, qcr_pre_py
-        global qcr_aspect_ratio
-
         # 将当前分辨率和分辨率比例保存(初始化)为历史记录
         # Save (initialize) the current resolution and resolution ratio as history
         qcr_pre_px = qcr_px
@@ -304,21 +301,34 @@ def qcr_check_lock_proportion(self, context):
             bpy.context.scene.qcr_properties.qcr_proportion_select = qcr_axay
         else:
             bpy.context.scene.qcr_properties.qcr_proportion_select = "default"
-
-        # 订阅分辨率消息
-        # Subscribe to resolution messages
-        subscribe_to_resolution("resolution_x", notify=qcr_update_resolution_x)
-        subscribe_to_resolution("resolution_y", notify=qcr_update_resolution_y)
     else:
-        # 清理特定所有者的所有订阅
-        # Clear all subscriptions for a specific owner
-        unsubscribe_to_resolution()
+        # 将分辨率和比例初始化
+        # Initialize the resolution and scale
+        qcr_pre_px = 0
+        qcr_pre_py = 0
+        qcr_aspect_ratio = 0.0
 
         # 设置分辨率格式下拉框选项的值
         # Set the value of the resolution format drop-down box option
         qcr_pxpy = f"{qcr_px}x{qcr_py}"  # e.g.640x360
         if qcr_pxpy in qcr_resolution_options.keys():
             bpy.context.scene.qcr_properties.qcr_resolution_setup = qcr_pxpy
+        else:
+            bpy.context.scene.qcr_properties.qcr_resolution_setup = "default"
+
+# 选中比例时是否设置分辨率X
+# Whether to set resolution X when selecting a scale
+def qcr_check_lock_resolution_x(self, context):
+    if bpy.context.scene.qcr_properties.qcr_lock_resolution_x:
+        if bpy.context.scene.qcr_properties.qcr_lock_resolution_y:
+            bpy.context.scene.qcr_properties.qcr_lock_resolution_y = False
+
+# 选中比例时是否设置分辨率Y
+# Whether to set the resolution Y when selecting the scale
+def qcr_check_lock_resolution_y(self, context):
+    if bpy.context.scene.qcr_properties.qcr_lock_resolution_y:
+        if bpy.context.scene.qcr_properties.qcr_lock_resolution_y:
+            bpy.context.scene.qcr_properties.qcr_lock_resolution_x = False
 
 # =========================================================
 
@@ -329,7 +339,7 @@ class QCR_Properties(bpy.types.PropertyGroup):
     # Resolution format settings
     qcr_resolution_setup: bpy.props.EnumProperty(
         name="Setup Resolution",
-        description="", 
+        description="Setup resolution.", 
         items=qcr_resolution_setup_items,
         default="default",
         update=qcr_update_resolution_setup,
@@ -338,7 +348,7 @@ class QCR_Properties(bpy.types.PropertyGroup):
     # Resolution ratio selection
     qcr_proportion_select: bpy.props.EnumProperty(
         name="Select Proportion",
-        description="", 
+        description="Select proportion.", 
         items=qcr_proportion_select_items,
         default="default",
         update=qcr_update_proportion_select,
@@ -347,11 +357,26 @@ class QCR_Properties(bpy.types.PropertyGroup):
     # Lock resolution ratio
     qcr_lock_proportion: bpy.props.BoolProperty(
         name="Lock Resolution Ratio", 
-        description="",
+        description="Lock resolution ratio.",
         default=False,
         update=qcr_check_lock_proportion,
     )
-
+    # 选中比例时设置分辨率X
+    # Set resolution X when scale is selected
+    qcr_lock_resolution_x: bpy.props.BoolProperty(
+        name="Lock Resolution X to Selected", 
+        description="Lock the resolution X, and set the resolution Y when the scale is selected.",
+        default=False,
+        update=qcr_check_lock_resolution_x,
+    )
+    # 选中比例时设置分辨率Y
+    # Set the resolution Y when the scale is selected
+    qcr_lock_resolution_y: bpy.props.BoolProperty(
+        name="Lock Resolution Y to Selected", 
+        description="Lock the resolution Y, and set the resolution X when the scale is selected.",
+        default=False,
+        update=qcr_check_lock_resolution_y,
+    )
 # =========================================================
 
 # 创建按钮事件处理函数
@@ -396,7 +421,6 @@ class QCR_ButtonOperator(bpy.types.Operator):
             qcr_py_scale = math.ceil(qcr_py / 2)
 
             if not bpy.context.scene.qcr_properties.qcr_lock_proportion:
-                # 根据"当前分辨率"更新格式下拉框选项
                 qcr_pxpy = f"{qcr_px_scale}x{qcr_py_scale}"  # e.g.640x360
                 if qcr_pxpy in qcr_resolution_options.keys():
                     bpy.context.scene.qcr_properties.qcr_resolution_setup = qcr_pxpy
@@ -416,7 +440,6 @@ class QCR_ButtonOperator(bpy.types.Operator):
             pass
 
         return {"FINISHED"}
-
 # =========================================================
 
 class QCR_Panel(bpy.types.Panel):
@@ -457,6 +480,12 @@ class QCR_Panel(bpy.types.Panel):
             # 分辨率比例选择
             # Resolution Proportion selection
             layout.prop(qcr_prop, "qcr_proportion_select", text="Select Proportion", expand=False)
+            # 选择分辨率比例后，同时更新分辨率
+            # After selecting the resolution ratio, update the resolution at the same time
+            layout_lock_col = layout.column(heading="Lock Resolution")
+            layout_lock_row = layout_lock_col.row(heading="")
+            layout_lock_row.prop(qcr_prop, "qcr_lock_resolution_x", text="X")
+            layout_lock_row.prop(qcr_prop, "qcr_lock_resolution_y", text="Y")
         else:
             # 分辨率格式设置
             # Resolution Resolution settings
@@ -464,7 +493,7 @@ class QCR_Panel(bpy.types.Panel):
 
         # 按钮（便捷按钮）
         # Button (convenience button)
-        layout_row = layout.row(heading='', align=False)
+        layout_row = layout.row(heading="", align=False)
         # 缩小（Zoom Out）
         layout_row.operator('qcr.render_format_setup', text='Scale / 2', icon="ZOOM_OUT", emboss=True, depress=False).mode = 2
         # 调转（Swap）
@@ -509,7 +538,7 @@ def unregister():
 
     del bpy.types.Scene.qcr_properties
 
-    bpy.msgbus.clear_by_owner(object())
+    unsubscribe_to_resolution()
 
     translation.unregister_module()
     addon_prefs.unregister_module()

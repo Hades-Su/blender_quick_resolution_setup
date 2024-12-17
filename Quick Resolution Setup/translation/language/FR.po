@@ -23,7 +23,7 @@ msgid "Resolution Adjustment"
 msgstr "Ajustement de la résolution"
 
 msgid "Resolution Adjustment (by Hades Su)"
-msgstr "Ajustement de la résolution (de Su Ming)"
+msgstr "Ajustement de la résolution (de Hades Su)"
 
 # ----
 
@@ -70,6 +70,21 @@ msgstr "rapport de résolution"
 
 msgid "Lock"
 msgstr "verrouillage"
+
+msgid "Lock Resolution"
+msgstr "Résolution de verrouillage"
+
+msgid "Lock Resolution X to Selected", 
+msgstr "Verrouiller la résolution X pour la sélection"
+
+msgid "Lock the resolution X, and set the resolution Y when the scale is selected."
+msgstr "Verrouille la résolution X et définit la résolution Y lorsque l'échelle est sélectionnée."
+
+msgid "Lock Resolution Y to Selected",
+msgstr "Verrouiller la résolution Y pour la sélection"
+
+msgid "Lock the resolution Y, and set the resolution X when the scale is selected."
+msgstr "Verrouille la résolution Y et définit la résolution X lorsque l'échelle est sélectionnée."
 
 # ----
 
