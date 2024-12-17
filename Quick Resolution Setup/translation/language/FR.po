@@ -41,8 +41,14 @@ msgstr "défaut"
 msgid "Setup Resolution"
 msgstr "Définir la résolution"
 
+msgid "Setup resolution."
+msgstr "Définir la résolution."
+
 msgid "Select Proportion"
 msgstr "Sélectionnez l'échelle"
+
+msgid "Select proportion."
+msgstr "Sélectionnez l'échelle."
 
 msgid "Incorrect format, using default resolution of 1920x1080."
 msgstr "Format incorrect, utilisant la résolution par défaut 1 920 x 1 080."
@@ -64,6 +70,9 @@ msgstr "Des proportions peu communes"
 
 msgid "Lock Resolution Ratio"
 msgstr "Rapport de résolution de verrouillage"
+
+msgid "Lock resolution ratio."
+msgstr "Rapport de résolution de verrouillage."
 
 msgid "Resolution Ratio"
 msgstr "rapport de résolution"

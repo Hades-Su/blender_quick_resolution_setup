@@ -41,8 +41,14 @@ msgstr "默认"
 msgid "Setup Resolution"
 msgstr "设置分辨率"
 
+msgid "Setup resolution."
+msgstr "设置分辨率。"
+
 msgid "Select Proportion"
 msgstr "选择比例"
+
+msgid "Select proportion."
+msgstr "选择比例。"
 
 msgid "Incorrect format, using default resolution of 1920x1080."
 msgstr "格式不正确，使用默认分辨率1920x1080。"
@@ -64,6 +70,9 @@ msgstr "不常用比例"
 
 msgid "Lock Resolution Ratio"
 msgstr "锁定分辨率比例"
+
+msgid "Lock resolution ratio."
+msgstr "锁定分辨率比例。"
 
 msgid "Resolution Ratio"
 msgstr "分辨率比例"

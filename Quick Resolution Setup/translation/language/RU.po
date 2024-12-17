@@ -41,8 +41,14 @@ msgstr "по умолчанию"
 msgid "Setup Resolution"
 msgstr "Установить разрешение"
 
+msgid "Setup resolution."
+msgstr "Установить разрешение."
+
 msgid "Select Proportion"
 msgstr "Выберите масштаб"
+
+msgid "Select proportion."
+msgstr "Выберите масштаб."
 
 msgid "Incorrect format, using default resolution of 1920x1080."
 msgstr "Неправильный формат, используется разрешение по умолчанию 1920x1080."
@@ -64,6 +70,9 @@ msgstr "Необычные пропорции"
 
 msgid "Lock Resolution Ratio"
 msgstr "Коэффициент разрешения блокировки"
+
+msgid "Lock resolution ratio."
+msgstr "Коэффициент разрешения блокировки."
 
 msgid "Resolution Ratio"
 msgstr "коэффициент разрешения"
